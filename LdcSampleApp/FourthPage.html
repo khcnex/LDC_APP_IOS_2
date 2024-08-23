@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>테스트용 로컬 html문서</title>
+        <script>
+            var jsFuncFromObjc = function(){
+                alert("func1 is called.");
+            }
+        
+        var UIWebViewJS = function(){
+            window.location = "das://JSTestOne";
+            window.location = "das://JSTestTwo";
+        }
+        
+        var WKWebViewJS = function(){
+            window.webkit.messageHandlers.das.postMessage({"test1":"Hello there", "test2":"Hello me"});
+            window.webkit.messageHandlers.das.postMessage({"test1":"Hello two there", "test2":"Hello two me"});
+            //window.webkit.messageHandlers.das.postMessage({"message":"Hello two there"});
+        }
+        
+        var sampleMethod = function(){
+            alert("method is called");
+        }
+        
+        var changeDocument = function(){
+            var titleList = ["Hello world","Bye world"];
+            
+            var title = document.getElementById("titleName");
+            var curTitle = title.innerText;
+            
+            if(curTitle == titleList[0]){
+                title.innerText = titleList[1];
+            } else{
+                title.innerText = titleList[0];
+            }
+        }
+        
+        function turnPage() {
+            window.webkit.messageHandlers.ldc.postMessage({"function":"turnPage","page":"ErrorPage"});
+        }
+        </script>
+    </head>
+    
+    <body>
+        <p>4번째웹페이지</p>
+        
+        <p id="titleName">Hello world</p>
+        <button onClick="turnPage();">페이지넘기기</button>
+    </body>
+    
+</html>

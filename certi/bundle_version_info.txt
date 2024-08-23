@@ -1,0 +1,34 @@
+** test
+com.lguplus.Uphonecare.Test
+Version 2.2.3
+Build 38
+
+2024.01.31 적용
+Version 2.2.4
+Build 1
+
+
+** 상용 
+Bundle Identifier : com.uplus.Uphonecare
+Version : 1.3.9
+Build : 8
+
+2023.12.11 적용
+Version : 1.3.10
+Build : 1
+
+2024.01.31 적용
+Version : 1.3.10 다시 적용
+Build : 3
+
+2024.08.22 적용
+Version : 1.3.11
+Build : 1
+권한 문구 수정
+
+
+20230914
+Certificates 및 Provisioning Profiles 갱신하여 전달드립니다.
+1. Certificate, Provisioning profiles  다운로드 URL
+https://drive.google.com/drive/folders/1sarW3lJ2DBtlRE1D0xCrSp1YnnR1EKRz?usp=sharing
+2. Certificate의 PW는 lguplus1234!!입니다. 

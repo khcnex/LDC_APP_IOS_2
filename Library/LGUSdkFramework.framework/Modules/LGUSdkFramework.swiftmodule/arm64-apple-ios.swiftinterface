@@ -1,0 +1,80 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 effective-4.1.50 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name LGUSdkFramework
+import Foundation
+@_exported import LGUSdkFramework
+import LocalAuthentication
+import MylgidFramework
+import SafariServices
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+@_inheritsConvenienceInitializers @objc public class Activity : ObjectiveC.NSObject {
+  @objc public class func startActivityForResult(_ ctCtext: UIKit.UIViewController, class: UIKit.UIViewController, intent: [Swift.String : Any], requestCode: Swift.Int)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class Cellinfo : ObjectiveC.NSObject {
+  @objc final public let userdefault: Foundation.UserDefaults
+  @objc public static let shared: LGUSdkFramework.Cellinfo
+  @objc public var paramData: [Swift.String : Swift.String]
+  @objc public var loadurl: Swift.String
+  @objc public var rtMsg: Swift.String
+  @objc public var gintent: Foundation.NSMutableDictionary
+  @objc public var ctCtext: UIKit.UIViewController!
+  @objc public var webview: WebKit.WKWebView?
+  @objc public var landscapeLeft: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var landscapeRight: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var portraitUpsideDown: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var portrait: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class WebLgViewController : ObjectiveC.NSObject {
+  @objc public class func topMostController()
+  @objc public class func webLoad(_ notification: Foundation.Notification)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) open class HybridWebView : UIKit.UIViewController, WebKit.WKScriptMessageHandler, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @objc @_Concurrency.MainActor(unsafe) override dynamic public func viewDidLayoutSubviews()
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, preferences: WebKit.WKWebpagePreferences, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy, WebKit.WKWebpagePreferences) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SetPinSetting : ObjectiveC.NSObject {
+  @objc public class func UsePin(_ str: Swift.String?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SetServerTarget : ObjectiveC.NSObject {
+  @objc public class func Server(_ str: Swift.String?)
+  @objc override dynamic public init()
+  @objc deinit
+}

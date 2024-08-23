@@ -1,0 +1,11 @@
+framework module LGUSdkFramework {
+  umbrella header "LGUSdkFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module LGUSdkFramework.Swift {
+    header "LGUSdkFramework-Swift.h"
+    requires objc
+}

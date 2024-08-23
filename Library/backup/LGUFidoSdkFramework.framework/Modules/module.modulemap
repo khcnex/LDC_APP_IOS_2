@@ -1,0 +1,6 @@
+framework module LGUFidoSdkFramework {
+  umbrella header "LGUFidoSdkFramework.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10B89EFC21436F1600783B54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B89EFB21436F1600783B54 /* AppDelegate.m */; };
+		10B89EFF21436F1600783B54 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10B89EFE21436F1600783B54 /* ViewController.mm */; };
+		10B89F0221436F1600783B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B89F0021436F1600783B54 /* Main.storyboard */; };
+		10B89F0421436F1C00783B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B89F0321436F1C00783B54 /* Assets.xcassets */; };
+		10B89F0721436F1C00783B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B89F0521436F1C00783B54 /* LaunchScreen.storyboard */; };
+		10B89F0A21436F1C00783B54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B89F0921436F1C00783B54 /* main.m */; };
+		10B89F1221436F5200783B54 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B89F1121436F5200783B54 /* AVFoundation.framework */; };
+		10B89F1421436F5B00783B54 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B89F1321436F5B00783B54 /* CoreMedia.framework */; };
+		10B89F1621436F6200783B54 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B89F1521436F6100783B54 /* AssetsLibrary.framework */; };
+		10B89F2321437D0100783B54 /* ImageCorrectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B89F1F21437D0100783B54 /* ImageCorrectionVC.m */; };
+		10B89F2421437D0100783B54 /* ImageCorrectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B89F2121437D0100783B54 /* ImageCorrectionVC.xib */; };
+		10B89F2521437D0100783B54 /* sample_document.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10B89F2221437D0100783B54 /* sample_document.jpg */; };
+		10B89F2B21437D0C00783B54 /* DocumentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B89F2721437D0C00783B54 /* DocumentVC.xib */; };
+		10B89F2C21437D0C00783B54 /* DocumentOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B89F2921437D0C00783B54 /* DocumentOverlayView.m */; };
+		10B89F2D21437D0C00783B54 /* DocumentVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10B89F2A21437D0C00783B54 /* DocumentVC.mm */; };
+		10B89F3321437D2D00783B54 /* libSelvyImageProcessing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B89F3221437D2D00783B54 /* libSelvyImageProcessing.a */; };
+		10B89F3821437D3A00783B54 /* libSelvyMobileScan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B89F3721437D3A00783B54 /* libSelvyMobileScan.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10B89EF721436F1600783B54 /* SelvyOCRforMobileScanDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelvyOCRforMobileScanDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B89EFA21436F1600783B54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		10B89EFB21436F1600783B54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		10B89EFD21436F1600783B54 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		10B89EFE21436F1600783B54 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		10B89F0121436F1600783B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10B89F0321436F1C00783B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10B89F0621436F1C00783B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10B89F0821436F1C00783B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B89F0921436F1C00783B54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		10B89F1121436F5200783B54 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		10B89F1321436F5B00783B54 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		10B89F1521436F6100783B54 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		10B89F1F21437D0100783B54 /* ImageCorrectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCorrectionVC.m; path = ViewControllers/ImageCorrection/ImageCorrectionVC.m; sourceTree = "<group>"; };
+		10B89F2021437D0100783B54 /* ImageCorrectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCorrectionVC.h; path = ViewControllers/ImageCorrection/ImageCorrectionVC.h; sourceTree = "<group>"; };
+		10B89F2121437D0100783B54 /* ImageCorrectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageCorrectionVC.xib; path = ViewControllers/ImageCorrection/ImageCorrectionVC.xib; sourceTree = "<group>"; };
+		10B89F2221437D0100783B54 /* sample_document.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample_document.jpg; path = ViewControllers/ImageCorrection/sample_document.jpg; sourceTree = "<group>"; };
+		10B89F2621437D0C00783B54 /* DocumentOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentOverlayView.h; path = ViewControllers/Document/DocumentOverlayView.h; sourceTree = "<group>"; };
+		10B89F2721437D0C00783B54 /* DocumentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DocumentVC.xib; path = ViewControllers/Document/DocumentVC.xib; sourceTree = "<group>"; };
+		10B89F2821437D0C00783B54 /* DocumentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentVC.h; path = ViewControllers/Document/DocumentVC.h; sourceTree = "<group>"; };
+		10B89F2921437D0C00783B54 /* DocumentOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentOverlayView.m; path = ViewControllers/Document/DocumentOverlayView.m; sourceTree = "<group>"; };
+		10B89F2A21437D0C00783B54 /* DocumentVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DocumentVC.mm; path = ViewControllers/Document/DocumentVC.mm; sourceTree = "<group>"; };
+		10B89F2E21437D2900783B54 /* SelvyAreaChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelvyAreaChecker.h; path = SelvyOCRforMobileScanDemo/libs/SelvyImageProcessing/inc/SelvyAreaChecker.h; sourceTree = "<group>"; };
+		10B89F2F21437D2900783B54 /* SelvyBlurDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelvyBlurDetector.h; path = SelvyOCRforMobileScanDemo/libs/SelvyImageProcessing/inc/SelvyBlurDetector.h; sourceTree = "<group>"; };
+		10B89F3021437D2900783B54 /* SelvyImageProcessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelvyImageProcessing.h; path = SelvyOCRforMobileScanDemo/libs/SelvyImageProcessing/inc/SelvyImageProcessing.h; sourceTree = "<group>"; };
+		10B89F3121437D2900783B54 /* SelvyAreaFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelvyAreaFinder.h; path = SelvyOCRforMobileScanDemo/libs/SelvyImageProcessing/inc/SelvyAreaFinder.h; sourceTree = "<group>"; };
+		10B89F3221437D2D00783B54 /* libSelvyImageProcessing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSelvyImageProcessing.a; path = SelvyOCRforMobileScanDemo/libs/SelvyImageProcessing/libSelvyImageProcessing.a; sourceTree = "<group>"; };
+		10B89F3421437D3600783B54 /* SelvyDocumentData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelvyDocumentData.h; path = SelvyOCRforMobileScanDemo/libs/SelvyMobileScan/inc/SelvyDocumentData.h; sourceTree = "<group>"; };
+		10B89F3521437D3600783B54 /* SelvyDocumentsDetectorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelvyDocumentsDetectorDelegate.h; path = SelvyOCRforMobileScanDemo/libs/SelvyMobileScan/inc/SelvyDocumentsDetectorDelegate.h; sourceTree = "<group>"; };
+		10B89F3621437D3600783B54 /* SelvyImageSaver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelvyImageSaver.h; path = SelvyOCRforMobileScanDemo/libs/SelvyMobileScan/inc/SelvyImageSaver.h; sourceTree = "<group>"; };
+		10B89F3721437D3A00783B54 /* libSelvyMobileScan.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSelvyMobileScan.a; path = SelvyOCRforMobileScanDemo/libs/SelvyMobileScan/libSelvyMobileScan.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10B89EF421436F1600783B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B89F1621436F6200783B54 /* AssetsLibrary.framework in Frameworks */,
+				10B89F1421436F5B00783B54 /* CoreMedia.framework in Frameworks */,
+				10B89F3321437D2D00783B54 /* libSelvyImageProcessing.a in Frameworks */,
+				10B89F1221436F5200783B54 /* AVFoundation.framework in Frameworks */,
+				10B89F3821437D3A00783B54 /* libSelvyMobileScan.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10B89EEE21436F1600783B54 = {
+			isa = PBXGroup;
+			children = (
+				10B89F1721436F6C00783B54 /* libs */,
+				10B89EF921436F1600783B54 /* SelvyOCRforMobileScanDemo */,
+				10B89EF821436F1600783B54 /* Products */,
+				10B89F1021436F5200783B54 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		10B89EF821436F1600783B54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10B89EF721436F1600783B54 /* SelvyOCRforMobileScanDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10B89EF921436F1600783B54 /* SelvyOCRforMobileScanDemo */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F1A21436F8D00783B54 /* ViewControllers */,
+				10B89EFA21436F1600783B54 /* AppDelegate.h */,
+				10B89EFB21436F1600783B54 /* AppDelegate.m */,
+				10B89EFD21436F1600783B54 /* ViewController.h */,
+				10B89EFE21436F1600783B54 /* ViewController.mm */,
+				10B89F0021436F1600783B54 /* Main.storyboard */,
+				10B89F0321436F1C00783B54 /* Assets.xcassets */,
+				10B89F0521436F1C00783B54 /* LaunchScreen.storyboard */,
+				10B89F0821436F1C00783B54 /* Info.plist */,
+				10B89F0921436F1C00783B54 /* main.m */,
+			);
+			path = SelvyOCRforMobileScanDemo;
+			sourceTree = "<group>";
+		};
+		10B89F1021436F5200783B54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F1521436F6100783B54 /* AssetsLibrary.framework */,
+				10B89F1321436F5B00783B54 /* CoreMedia.framework */,
+				10B89F1121436F5200783B54 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10B89F1721436F6C00783B54 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F1821436F7200783B54 /* SelvyMobileScan */,
+				10B89F1C21437C7500783B54 /* SelvyImageProcessing */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		10B89F1821436F7200783B54 /* SelvyMobileScan */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F1921436F7F00783B54 /* inc */,
+				10B89F3721437D3A00783B54 /* libSelvyMobileScan.a */,
+			);
+			name = SelvyMobileScan;
+			sourceTree = "<group>";
+		};
+		10B89F1921436F7F00783B54 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F3421437D3600783B54 /* SelvyDocumentData.h */,
+				10B89F3521437D3600783B54 /* SelvyDocumentsDetectorDelegate.h */,
+				10B89F3621437D3600783B54 /* SelvyImageSaver.h */,
+			);
+			name = inc;
+			sourceTree = "<group>";
+		};
+		10B89F1A21436F8D00783B54 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F1B21436F9500783B54 /* Document */,
+				10B89F1E21437CF600783B54 /* ImageCorrection */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		10B89F1B21436F9500783B54 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F2721437D0C00783B54 /* DocumentVC.xib */,
+				10B89F2821437D0C00783B54 /* DocumentVC.h */,
+				10B89F2A21437D0C00783B54 /* DocumentVC.mm */,
+				10B89F2621437D0C00783B54 /* DocumentOverlayView.h */,
+				10B89F2921437D0C00783B54 /* DocumentOverlayView.m */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		10B89F1C21437C7500783B54 /* SelvyImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F1D21437C8000783B54 /* inc */,
+				10B89F3221437D2D00783B54 /* libSelvyImageProcessing.a */,
+			);
+			name = SelvyImageProcessing;
+			sourceTree = "<group>";
+		};
+		10B89F1D21437C8000783B54 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F2E21437D2900783B54 /* SelvyAreaChecker.h */,
+				10B89F3121437D2900783B54 /* SelvyAreaFinder.h */,
+				10B89F2F21437D2900783B54 /* SelvyBlurDetector.h */,
+				10B89F3021437D2900783B54 /* SelvyImageProcessing.h */,
+			);
+			name = inc;
+			sourceTree = "<group>";
+		};
+		10B89F1E21437CF600783B54 /* ImageCorrection */ = {
+			isa = PBXGroup;
+			children = (
+				10B89F2121437D0100783B54 /* ImageCorrectionVC.xib */,
+				10B89F2021437D0100783B54 /* ImageCorrectionVC.h */,
+				10B89F1F21437D0100783B54 /* ImageCorrectionVC.m */,
+				10B89F2221437D0100783B54 /* sample_document.jpg */,
+			);
+			name = ImageCorrection;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10B89EF621436F1600783B54 /* SelvyOCRforMobileScanDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B89F0D21436F1C00783B54 /* Build configuration list for PBXNativeTarget "SelvyOCRforMobileScanDemo" */;
+			buildPhases = (
+				10B89EF321436F1600783B54 /* Sources */,
+				10B89EF421436F1600783B54 /* Frameworks */,
+				10B89EF521436F1600783B54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SelvyOCRforMobileScanDemo;
+			productName = SelvyOCRforMobileScanDemo;
+			productReference = 10B89EF721436F1600783B54 /* SelvyOCRforMobileScanDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10B89EEF21436F1600783B54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = SelvasAI;
+				TargetAttributes = {
+					10B89EF621436F1600783B54 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 10B89EF221436F1600783B54 /* Build configuration list for PBXProject "SelvyOCRforMobileScanDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10B89EEE21436F1600783B54;
+			productRefGroup = 10B89EF821436F1600783B54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10B89EF621436F1600783B54 /* SelvyOCRforMobileScanDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10B89EF521436F1600783B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B89F2521437D0100783B54 /* sample_document.jpg in Resources */,
+				10B89F0721436F1C00783B54 /* LaunchScreen.storyboard in Resources */,
+				10B89F0421436F1C00783B54 /* Assets.xcassets in Resources */,
+				10B89F2421437D0100783B54 /* ImageCorrectionVC.xib in Resources */,
+				10B89F0221436F1600783B54 /* Main.storyboard in Resources */,
+				10B89F2B21437D0C00783B54 /* DocumentVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10B89EF321436F1600783B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B89EFF21436F1600783B54 /* ViewController.mm in Sources */,
+				10B89F2D21437D0C00783B54 /* DocumentVC.mm in Sources */,
+				10B89F0A21436F1C00783B54 /* main.m in Sources */,
+				10B89F2C21437D0C00783B54 /* DocumentOverlayView.m in Sources */,
+				10B89F2321437D0100783B54 /* ImageCorrectionVC.m in Sources */,
+				10B89EFC21436F1600783B54 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		10B89F0021436F1600783B54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10B89F0121436F1600783B54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10B89F0521436F1C00783B54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10B89F0621436F1C00783B54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10B89F0B21436F1C00783B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		10B89F0C21436F1C00783B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10B89F0E21436F1C00783B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKPHA9B2T7;
+				INFOPLIST_FILE = SelvyOCRforMobileScanDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SelvyOCRforMobileScanDemo/libs/SelvyImageProcessing",
+					"$(PROJECT_DIR)/SelvyOCRforMobileScanDemo/libs/SelvyMobileScan",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selvasai.demo.recognizer.mobilescan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10B89F0F21436F1C00783B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKPHA9B2T7;
+				INFOPLIST_FILE = SelvyOCRforMobileScanDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SelvyOCRforMobileScanDemo/libs/SelvyImageProcessing",
+					"$(PROJECT_DIR)/SelvyOCRforMobileScanDemo/libs/SelvyMobileScan",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.selvasai.demo.recognizer.mobilescan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10B89EF221436F1600783B54 /* Build configuration list for PBXProject "SelvyOCRforMobileScanDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B89F0B21436F1C00783B54 /* Debug */,
+				10B89F0C21436F1C00783B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B89F0D21436F1C00783B54 /* Build configuration list for PBXNativeTarget "SelvyOCRforMobileScanDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B89F0E21436F1C00783B54 /* Debug */,
+				10B89F0F21436F1C00783B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10B89EEF21436F1600783B54 /* Project object */;
+}

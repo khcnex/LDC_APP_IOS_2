@@ -1,0 +1,43 @@
+안녕하십니까?
+
+모바일미디어서비스개발팀 주동혁입니다.
+
+ 
+
+김홍진님,
+
+다음과 같이 발급하여 회신드립니다.
+
+ 
+
+1. Certificate 및 Provisioning profiles 다운로드 URL
+
+: https://drive.google.com/drive/folders/1DX5Q84FNQ3t3h-AjZFCs3ZBNgM7QBNGO?usp=sharing
+
+ 
+
+2. Certificate의 PW는 lguplus1234!!입니다.
+
+ 
+
+3. 안내사항
+
+  (1) App 빌드를 위한 Certificate 및 Provisioning profiles의 갱신 작업은 Push 발송을 위한 APNS Certificate에 영향을 주지 않습니다.
+
+       APNS Certificate는 발급 시점에 알려드렸던 만료일이 도래할 무렵에 신규 발급을 진행하시면 됩니다.
+
+  (2) App을 빌드하기 위해서 복수개의 Bundle ID를 사용하고 있는지 다시 한번 점검하시고, 이번 갱신발급의 누락이 없는지 반드시 확인 부탁드립니다.
+
+       Ex. com.uplus.AAA라는 Bundle ID를 기본으로 사용하나 위젯/푸쉬 등의 기능을 구현하기 위해 com.uplus.BBB라는 Bundle ID를 함께 사용 하는 서비스
+
+  (3) 공유드린 Certificate의 만료일은 22년10월14일(PDT)입니다. 차년도에도 갱신 안내가 있을 예정이오니 업무에 참고부탁드립니다.
+
+ 
+
+이상입니다.
+
+ 
+
+감사합니다.
+
+주동혁드림

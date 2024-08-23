@@ -1,0 +1,144 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/hmwoo/Desktop/DasLib_IOS/Library/FIDO/release/LGUFidoSdkFramework.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "LGUFidoSdkFramework-Swift.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/Library/FIDO/release/LGUFidoSdkFramework.framework/Headers/LGUFidoSdkFramework-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "LGUFidoSdkFramework.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/LGUFidoSdkFramework.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/hmwoo/Desktop/DasLib_IOS/Library/FIDO/release/LGUFidoSdkFramework.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/Library/FIDO/release/LGUFidoSdkFramework.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/hmwoo/Desktop/DasLib_IOS/Library/FIDO/release/LGUFidoSdkFramework.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Activity.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/Activity.h"
+        },
+        {
+          'type': 'file',
+          'name': "AsyncTask.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/AsyncTask.h"
+        },
+        {
+          'type': 'file',
+          'name': "AuthenticatorUtil.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/AuthenticatorUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "ConfigParamView.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/ConfigParamView.h"
+        },
+        {
+          'type': 'file',
+          'name': "FidoUtil.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/FidoUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "HybridWebView.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/HybridWebView.h"
+        },
+        {
+          'type': 'file',
+          'name': "IntegrationContants.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/IntegrationContants.h"
+        },
+        {
+          'type': 'file',
+          'name': "IntegrationService.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/IntegrationService.h"
+        },
+        {
+          'type': 'file',
+          'name': "JSON.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/JSON/JSON.h"
+        },
+        {
+          'type': 'file',
+          'name': "MBProgressHUD.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/MBProgressHUD.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSObject+SBJSON.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/JSON/NSObject+SBJSON.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSString+SBJSON.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/JSON/NSString+SBJSON.h"
+        },
+        {
+          'type': 'file',
+          'name': "OrderedDictionary.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/OrderedDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "RestAPIEnum.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/RestAPIEnum.h"
+        },
+        {
+          'type': 'file',
+          'name': "RestAPIParameterEnum.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/RestAPIParameterEnum.h"
+        },
+        {
+          'type': 'file',
+          'name': "RestHttpClientService.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/RestHttpClientService.h"
+        },
+        {
+          'type': 'file',
+          'name': "SBJSON.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/JSON/SBJSON.h"
+        },
+        {
+          'type': 'file',
+          'name': "SBJsonBase.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/JSON/SBJsonBase.h"
+        },
+        {
+          'type': 'file',
+          'name': "SBJsonParser.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/JSON/SBJsonParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "SBJsonWriter.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/JSON/SBJsonWriter.h"
+        },
+        {
+          'type': 'file',
+          'name': "Util.h",
+          'external-contents': "/Users/hmwoo/Desktop/DasLib_IOS/DasChildLIb_Source/Util.h"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+framework module MylgidFramework {
+  umbrella header "MylgidFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module MylgidFramework.Swift {
+    header "MylgidFramework-Swift.h"
+    requires objc
+}

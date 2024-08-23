@@ -1,0 +1,38 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MylgidFramework
+import AuthenticationServices
+import Foundation
+@_exported import MylgidFramework
+import SafariServices
+import Security
+import Swift
+import UIKit
+import WebKit
+@objc @_inheritsConvenienceInitializers public class MainViewController : UIKit.UIViewController, SafariServices.SFSafariViewControllerDelegate {
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  public func addMobilFlag(url: Swift.String) -> Swift.String
+  @objc deinit
+  public func reqOAuth()
+  @available(iOS 11.0, *)
+  public var authSession: SafariServices.SFAuthenticationSession? {
+    get
+  }
+  @objc public func safariViewControllerDidFinish(_ controller: SafariServices.SFSafariViewController)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension MainViewController : AuthenticationServices.ASWebAuthenticationPresentationContextProviding {
+  @available(iOS 13.0, *)
+  @objc dynamic public func presentationAnchor(for session: AuthenticationServices.ASWebAuthenticationSession) -> AuthenticationServices.ASPresentationAnchor
+}
+@_inheritsConvenienceInitializers @objc public class infolist : ObjectiveC.NSObject {
+  @objc public static let shared: MylgidFramework.infolist
+  @objc public var url: Swift.String?
+  @objc public var returnurl: Swift.String?
+  @objc public func KeyChain(ExapmeString: Swift.String)
+  @objc public func BaseDecoding(returnurl: Swift.String) -> Foundation.URLRequest
+  @objc deinit
+  @objc override dynamic public init()
+}

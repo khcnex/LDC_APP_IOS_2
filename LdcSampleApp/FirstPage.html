@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name = "viewport" content="width=device-width"/>
+        <title>Hybrid App</title>
+        <script type="text/javascript">
+
+			( function (){
+				if ( ! window.atob ){
+
+					window.atob = function ( b64text ){  return Base64.decode( b64text );  };
+					window.btoa = function ( utf8text ){  return Base64.encode( utf8text );  };
+
+					var Base64 = {
+
+						keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+
+
+						encode : function ( input ){
+							var output = "";
+							var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+							var x = 0;
+
+							input = Base64._utf8_encode( input );
+
+							while ( x < input.length ){
+
+								chr1 = input.charCodeAt( x++ );
+								chr2 = input.charCodeAt( x++ );
+								chr3 = input.charCodeAt( x++ );
+
+								enc1 = chr1 >> 2;
+								enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+								enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+								enc4 = chr3 & 63;
+
+								if ( isNaN(chr2) ) enc3 = enc4 = 64;
+								else if ( isNaN(chr3) ) enc4 = 64;
+
+								output = output + this.keyStr.charAt( enc1 ) + this.keyStr.charAt( enc2 ) + this.keyStr.charAt( enc3 ) +
+											this.keyStr.charAt( enc4 );
+							}
+
+							return output;
+						},
+
+
+						decode : function ( input ){
+							var output = "";
+							var chr1, chr2, chr3;
+							var enc1, enc2, enc3, enc4;
+							var x = 0;
+
+							input = input.replace( /[^A-Za-z0-9\+\/\=]/g , "" );
+
+							while ( x < input.length ){
+
+								enc1 = this.keyStr.indexOf( input.charAt(x++) );
+								enc2 = this.keyStr.indexOf( input.charAt(x++) );
+								enc3 = this.keyStr.indexOf( input.charAt(x++) );
+								enc4 = this.keyStr.indexOf( input.charAt(x++) );
+
+								chr1 = (enc1 << 2) | (enc2 >> 4);
+								chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+								chr3 = ((enc3 & 3) << 6) | enc4;
+
+								output = output + String.fromCharCode( chr1 );
+
+								if ( enc3 != 64 ) output = output + String.fromCharCode( chr2 );
+
+								if ( enc4 != 64 ) output = output + String.fromCharCode( chr3 );
+							}
+
+							output = Base64._utf8_decode( output );
+
+							return output;
+						},
+
+
+						_utf8_encode : function ( string ){
+							string = string.replace( /\r\n/g , "\n" );
+							var utftext = "";
+
+							for ( var n = 0; n < string.length; n++ ){
+
+								var c = string.charCodeAt( n );
+
+								if ( c < 128 ) utftext += String.fromCharCode( c );
+
+								else if ( (c > 127) && (c < 2048) ){
+									utftext += String.fromCharCode( (c >> 6) | 192 );
+									utftext += String.fromCharCode( (c & 63) | 128 );
+								}
+
+								else {
+									utftext += String.fromCharCode( (c >> 12) | 224 );
+									utftext += String.fromCharCode( ( (c >> 6) & 63 ) | 128 );
+									utftext += String.fromCharCode( (c & 63) | 128 );
+								}
+							}
+
+							return utftext;
+						},
+
+
+						_utf8_decode : function ( utftext ){
+							var string = "";
+							var x = 0;
+							var c = c1 = c2 = 0;
+
+							while ( x < utftext.length ){
+
+								c = utftext.charCodeAt( x );
+
+								if ( c < 128 ) {
+									string += String.fromCharCode( c );
+									x++;
+								}
+
+								else if ( (c > 191) && (c < 224) ){
+									c2 = utftext.charCodeAt( x + 1 );
+									string += String.fromCharCode( ( (c & 31) << 6 ) | (c2 & 63) );
+									x += 2;
+								}
+
+								else {
+									c2 = utftext.charCodeAt( x + 1 );
+									c3 = utftext.charCodeAt( x + 2 );
+									string += String.fromCharCode( ( (c & 15) << 12 ) | ( (c2 & 63) << 6 ) | (c3 & 63) );
+									x += 3;
+								}
+							}
+
+							return string;
+						}
+					}
+				}
+			}() );
+
+
+
+
+
+
+
+
+			var navUA = navigator.userAgent;
+			var userAgent = navUA.toLowerCase();
+		
+        	// ==================== Request [Web -> APP] START ====================
+            function reqCamera()
+            {
+            	if(userAgent.match('iphone') || userAgent.match('ipod') || userAgent.match('ipad'))
+            	{
+            		if(window.webkit)
+					{
+						window.webkit.messageHandlers.ldc.postMessage({"function":"reqCamera"});
+					}
+				}
+				else if(userAgent.match('android'))
+				{
+					//window.HybridApp.sendRequestParam(formName.action, formName.method, tmpStr);
+				}
+            }
+        
+            function configFido()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"configFido"});
+            }
+        
+            function reqOCRAutoCamera()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqOCRCamera","auto":"on"});
+            }
+		
+            function reqOCRBasicReceiptCamera()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqOCRCamera","auto":"off","imgType":"receipt"});
+            }
+		
+            function reqOCRBasicEstimateCamera()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqOCRCamera","auto":"off","imgType":"estimate"});
+            }
+        
+            function reqPhotoAlbum()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqPhotoAlbum"});
+            }
+		
+            function reqMultiPhotoAlbum()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqMultiPhotoAlbum"});
+            }
+		
+            function reqAppRunCnt()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqAppRunCnt"});
+            }
+		
+            function reqDeviceIP()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqDeviceIP"});
+            }
+		
+            function reqCall()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqCall","telNumber":"010-5285-7896"});
+            }
+		
+            function reqMapPermission()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqMapPermission"});
+            }
+		
+			function reqLocation()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqLocation"});
+            }
+		
+			function reqDasIDPWLoginPage()
+			{
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqDasPage","page":"idPwLogin"});
+            }
+		
+            function reqDasCTNLoginPage()
+			{
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqDasPage","page":"ctnLogin"});
+            }
+        
+            function reqDasAutoLoginPage()
+            {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"reqDasPage","page":"autoLogin"});
+            }
+        
+            function reqWebPage()
+            {
+            	//userBar 가 true일경우 Bar로 뒤로가기 앞으로가기 가능 or Swipe가 true일경우 스와이프로 뒤로가기 앞으로가기 가능
+                window.webkit.messageHandlers.ldc.postMessage
+                (
+                	{"function":"reqWebPage","url":"http://www.hanjin.co.kr/Delivery_html/inquiry/result_waybill.jsp","param":"wbl_num=505944112704","method":"POST","useBar":"true","useSwipe":"true"}
+				);
+            }
+        
+            function reqPgWebPage()
+            {
+                //userBar 가 true일경우 Bar로 뒤로가기 앞으로가기 가능 or Swipe가 true일경우 스와이프로 뒤로가기 앞으로가기 가능
+                window.webkit.messageHandlers.ldc.postMessage
+                (
+                 {"function":"reqPgWebPage","url":"http://nexgrid2.iptime.org:8084/mob/#/main/lossPayReq","param":"","method":"GET","useBar":"FALSE","useSwipe":"FALSE"}
+                 );
+            }
+		
+            function reqHttpTest()
+            {
+				window.webkit.messageHandlers.ldc.postMessage
+                (
+                	{"function":"reqHttpTest"}
+				);
+			}
+        
+            function reqExit()
+            {
+                window.webkit.messageHandlers.ldc.postMessage
+                (
+                    {"function":"reqExit"}
+                );
+            }
+			// ==================== Request [Web -> APP] END ====================
+		
+			// ==================== Response [APP -> WEB] START ====================
+			
+			function resOCRServerResData(status, fields , image)
+			{
+				console.log(status);
+			
+				var decodeFields = decodeURIComponent(fields);
+				
+				console.log(decodeFields);
+
+				var fieldsArray = JSON.parse(decodeFields);
+
+				for(var i=0 ; i < fieldsArray.length ; i++)
+				{
+					console.log(fieldsArray[i]);
+				}
+				
+				var file = convertBase64ToFile(image);
+				
+				var preview = document.querySelector('img');
+				var reader = new FileReader();
+				
+				reader.addEventListener("load", function () {
+					preview.src = reader.result;
+			    }, false);
+
+				if (file) {
+					reader.readAsDataURL(file);
+					reader.onload = function(e) {
+					  console.log(e.target.result);
+					}
+				}
+			}
+		
+			function convertBase64ToFile(image)
+			{
+				var bytecharacters = atob(image);
+				var byteNumbers = new Array(bytecharacters.length);
+				for(var i = 0; i < bytecharacters.length; i++)
+			    {
+					byteNumbers[i] = bytecharacters.charCodeAt(i);
+			    }
+				var byteArray = new Uint8Array(byteNumbers);
+				var file = new Blob([byteArray], {type: 'image/jpeg'});
+				
+				return file;
+			}
+			
+			function resBase64ImgData(data)
+            {
+				var src = document.getElementById("sampleImage");
+				
+                var img = document.createElement("img");
+ 
+				img.src = "data:image/jpeg;base64," + data;
+				
+				src.appendChild(img);
+            }
+		
+			function resAppRunCnt(runCnt)
+            {
+                console.log(runCnt);
+				alert(runCnt);
+            }
+		
+			function resDeviceIP(ip)
+            {
+				alert(ip);
+            }
+		
+            function resLocation(latitude, longitude)
+            {
+                alert("위도 : " + latitude + ", 경도 : " + longitude);
+            }
+		
+			function resLoginResponse(rt, rt_msg, sso_key, login_type, user_id, oneid_key, service_key, name, lgt_type, pw_update_dt, tos_service_cd, id_type)
+			{
+				alert("rt : " + rt + ", rt_msg : " + rt_msg + ", sso_key : " + sso_key + ", login_type : " + login_type + ", user_id : " + user_id + ", oneid_key : " + oneid_key + ", service_key : " + service_key + ", name : " + name + ", lgt_type : " + lgt_type + ", pw_update_dt : " + pw_update_dt + ", tos_service_cd : " + tos_service_cd + ", id_type : " + id_type)
+			}
+		
+			function resCtnLoginResponse(rt, rt_msg, sso_key, login_type, user_id, oneid_key, service_key, name, lgt_type, pw_update_dt, tos_service_cd, id_type, req_login_ctn, vtid_yn, vtid_rqst_rsn_cd, req_login_tel)
+			{
+				alert("rt : " + rt + ", rt_msg : " + rt_msg + ", sso_key : " + sso_key + ", login_type : " + login_type + ", user_id : " + user_id + ", oneid_key : " + oneid_key + ", service_key : " + service_key + ", name : " + name + ", lgt_type : " + lgt_type + ", pw_update_dt : " + pw_update_dt + ", tos_service_cd : " + tos_service_cd + ", id_type : " + id_type + ", req_login_ctn : " + req_login_ctn + ", vtid_yn : " + vtid_yn + ", vtid_rqst_rsn_cd : " + vtid_rqst_rsn_cd + ", req_login_tel : " + req_login_tel)
+			}
+				
+			// ==================== Response [APP -> WEB] END ====================
+		
+			
+		
+		
+			/*
+            function turnPage() {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"turnPage","page":"SecondPage"});
+            }
+		
+            function javaTest() {
+                window.webkit.messageHandlers.ldc.postMessage({"function":"javaTest","page":"SecondPage"});
+            }
+            */
+		
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <button style="font-size:22px;height:200px;width:200px" onClick="configFido();">FIDO 설정</button>
+			<button style="font-size:22px;height:200px;width:200px" onClick="reqCamera();">기본 카메라 호출</button>
+			<button style="font-size:22px;height:200px;width:200px" onClick="reqOCRAutoCamera();">OCR 제공 카메라 호출(자동)</button>
+			<button style="font-size:22px;height:200px;width:200px" onClick="reqOCRBasicReceiptCamera();">OCR 제공 카메라 호출(수동:영수증)</button>
+			<button style="font-size:22px;height:200px;width:200px" onClick="reqOCRBasicEstimateCamera();">OCR 제공 카메라 호출(수동:견적서)</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqPhotoAlbum();">기본 포토 앨범 호출</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqMultiPhotoAlbum();">멀티 포토 앨범 호출</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqAppRunCnt();">앱 구동 횟수 요청</button>
+			<button style="font-size:22px;height:200px;width:200px" onClick="reqDeviceIP();">디바이스 IP 요청(Wifi 의 경우 사설 IP)</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqCall();">전화 요청</button>
+            <!--<button style="height:200px;width:200px" onClick="reqMapPermission();">지도 권한 요청</button>-->
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqLocation();">현재 위치(경도/위도) 요청</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqDasIDPWLoginPage();">다스 ID/PW 로그인 페이지 요청</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqDasCTNLoginPage();">다스 CTN 로그인 페이지 요청</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqDasAutoLoginPage();">다스 자동로그인</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqPgWebPage();">PG 페이지 요청</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqWebPage();">한진 택배 페이지 요청</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqExit();">종료 요청</button>
+            <button style="font-size:22px;height:200px;width:200px" onClick="reqHttpTest();">http test</button>
+			<!--
+            <label for="file">Choose file to upload</label>
+            <input type="file" id="file" name="file" onClick="return checkPermission()" multiple>
+                <input type="file" accept="image/*" id="image-input"/>
+			-->
+        </div>
+		
+        <div id="sampleImage">
+        </div>
+		
+        <a href="http://www.pdf995.com/samples/pdf.pdf" style="font-size:12px;">dummy.pdf</a>
+		
+        <input type='file' name='name ocr' title='ocr' capture='camera' value='ddd' accept="image/ocr,image/true,image/true" @change='loadImage' />
+		<input type="file" name="selectPicture" @change='loadImage' multiple="multiple">
+		<img src="" height="200" alt="이미지 미리보기...">
+    </body>
+</html>
